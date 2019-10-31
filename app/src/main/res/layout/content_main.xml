@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="398dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true" />
+
+    <TextView
+        android:id="@+id/txtSaldo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/recycler_view"
+        android:layout_toEndOf="@+id/lblBalance"
+        android:fontFamily="sans-serif-light"
+        android:textSize="@dimen/saldo"
+        android:textColor="@color/saldo_value_text"
+        android:layout_toRightOf="@+id/lblBalance"
+        android:paddingRight="10sp"
+        android:paddingLeft="10sp" />
+
+    <TextView
+        android:id="@+id/lblBalance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/recycler_view"
+        android:fontFamily="sans-serif-light"
+        android:paddingLeft="5sp"
+        android:text="@string/balance"
+        android:textColor="@color/saldo_label_text"
+        android:textSize="@dimen/saldo"
+        android:layout_alignParentLeft="true"
+        android:paddingRight="5sp" />
+
+</RelativeLayout>
